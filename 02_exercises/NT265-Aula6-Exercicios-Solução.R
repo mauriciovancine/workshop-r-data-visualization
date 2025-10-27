@@ -5,60 +5,114 @@
 # ---
 
 # pacotes ----
-
+library(tidyverse)
 library(palmerpenguins)
-library(dplyr)
-library(ggplot2)
 library(ggpubr)
 library(GGally)
 library(plotly)
 library(gganimate)
 
+# remova os NAs
+penguins <- drop_na(penguins)
+penguins
+
 ## exercicio 01 ----
 # Faça um histograma da massa corporal (body_mass_g) dos pinguins.
 ggplot(penguins, aes(x = body_mass_g)) +
-    geom_histogram(binwidth = 200, fill = "steelblue", color = "black") +
-    labs(x = "Massa corporal (g)", y = "Frequência", title = "Distribuição da massa corporal")
+    geom_histogram(fill = "steelblue", color = "black") +
+    labs(x = "Massa corporal (g)", y = "Frequência", 
+         title = "Distribuição da massa corporal") +
+    theme_bw(base_size = 20)
 
 ## exercicio 02 ----
 # Crie um histograma de massa corporal colorido por espécie.
 ggplot(penguins, aes(x = body_mass_g, fill = species)) +
-    geom_histogram(alpha = 0.7, binwidth = 200, position = "identity") +
-    labs(x = "Massa corporal (g)", y = "Frequência", title = "Massa corporal por espécie")
+    geom_histogram(alpha = 0.7, position = "identity") +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    labs(x = "Massa corporal (g)", y = "Frequência", 
+         title = "Massa corporal por espécie") +
+    theme_bw(base_size = 20)
 
 ## exercicio 03 ----
 # Faça um gráfico de densidade do comprimento da nadadeira por espécie.
 ggplot(penguins, aes(x = flipper_length_mm, fill = species)) +
     geom_density(alpha = 0.5) +
-    labs(x = "Comprimento da nadadeira (mm)", y = "Densidade", title = "Distribuição do comprimento da nadadeira")
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    labs(x = "Comprimento da nadadeira (mm)", y = "Densidade", 
+         title = "Distribuição do comprimento da nadadeira") +
+    theme_bw(base_size = 20)
 
 ## exercicio 04 ----
 # Crie um gráfico de densidade facetado por sexo.
 ggplot(penguins, aes(x = body_mass_g, fill = sex)) +
     geom_density(alpha = 0.5) +
+    scale_fill_manual(values = c("lightblue", "pink")) +
     facet_wrap(~species) +
-    labs(x = "Massa corporal (g)", y = "Densidade", title = "Distribuição da massa corporal por espécie e sexo")
+    labs(x = "Massa corporal (g)", y = "Densidade", 
+         title = "Distribuição da massa corporal por espécie e sexo") +
+    theme_bw(base_size = 20)
 
 ## exercicio 05 ----
-# Crie um gráfico de setores mostrando a proporção de cada espécie.
-ggpie(penguins, "species", fill = "species", color = "white", title = "Proporção de espécies")
+# Crie uma tabela de frequência mostrando a proporção de pinguins por ilhas e 
+# depois use o ggpie para criar um gráfico de setores (pizza).
+
+# calculo da proporcao
+penguins_prop <- penguins %>%
+    dplyr::count(island) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
+penguins_prop
+
+ggpie(penguins_prop,
+      "prop", 
+      label = "prop",
+      lab.pos = "in", 
+      lab.font = c(8, "white"),
+      fill = "island", 
+      color = "white",
+      palette = c("darkorange", "purple", "cyan4"))
 
 ## exercicio 06 ----
-# Mostre um gráfico de pizza da proporção de pinguins por ilha.
-ggpie(penguins, "island", fill = "island", color = "white", title = "Proporção por ilha")
+# use os mesmos dados para criar um gráfico de dunuts usando o ggdonutchart.
+ggdonutchart(penguins_prop,
+      "prop", 
+      label = "prop",
+      lab.pos = "in", 
+      lab.font = c(8, "white"),
+      fill = "island", 
+      color = "white",
+      palette = c("darkorange", "purple", "cyan4"))
 
 ## exercicio 07 ----
-# Mostre a proporção de sexos em cada espécie usando facet.
-penguins %>%
-    drop_na(sex) %>%
-    ggpie("sex", fill = "sex", color = "white", facet.by = "species",
-          title = "Proporção de sexos por espécie")
+# Mostre a proporção de sexos em cada ilha usando facet.
+penguins_sex_prop <- penguins %>%
+    dplyr::count(island, sex) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
+penguins_sex_prop
+
+penguins_sex_prop %>%
+    ggdonutchart("prop", 
+                 fill = "island", 
+                 color = "white", 
+                 facet.by = "sex",
+                 title = "Proporção de sexos por espécie")
 
 ## exercicio 08 ----
-# Faça um gráfico de barras mostrando o número de indivíduos por espécie.
-ggplot(penguins, aes(x = species)) +
-    geom_bar(fill = "lightgreen", color = "black") +
-    labs(x = "Espécie", y = "Contagem", title = "Número de indivíduos por espécie")
+# Faça um gráfico de barras mostrando o número de indivíduos por ilha. Add
+# os numeros as barras.
+penguins_count <- penguins %>%
+    dplyr::count(island)
+penguins_count
+
+ggplot(data = penguins_count, 
+       aes(x = island, y = n, fill = island)) +
+    geom_bar(stat = "identity") +
+    geom_label(aes(label = n), fill = "white", size = 10) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    theme(legend.position = "none") +
+    labs(x = "Ilhas", 
+         y = "Número de indivíduos", 
+         fill = "Espécie")
 
 ## exercicio 09 ----
 # Crie um gráfico de barras com a média da massa corporal por espécie.
@@ -67,7 +121,8 @@ penguins %>%
     summarise(media_massa = mean(body_mass_g, na.rm = TRUE)) %>%
     ggplot(aes(x = species, y = media_massa, fill = species)) +
     geom_col() +
-    labs(x = "Espécie", y = "Massa média (g)", title = "Massa média por espécie")
+    labs(x = "Espécie", y = "Massa média (g)", title = "Massa média por espécie") +
+    theme_bw(base_size = 20)
 
 ## exercicio 10 ----
 # Crie um gráfico de barras agrupadas por sexo e espécie (média da nadadeira).
@@ -77,13 +132,17 @@ penguins %>%
     summarise(media_flipper = mean(flipper_length_mm, na.rm = TRUE)) %>%
     ggplot(aes(x = species, y = media_flipper, fill = sex)) +
     geom_col(position = "dodge") +
-    labs(x = "Espécie", y = "Comprimento médio (mm)", title = "Comprimento médio da nadadeira por sexo e espécie")
+    labs(x = "Espécie", y = "Comprimento médio (mm)", 
+         title = "Comprimento médio da nadadeira por sexo e espécie") +
+    theme_bw(base_size = 20)
 
 ## exercicio 11 ----
 # Crie um boxplot da massa corporal por espécie.
 ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
     geom_boxplot() +
-    labs(x = "Espécie", y = "Massa corporal (g)", title = "Distribuição da massa por espécie")
+    labs(x = "Espécie", y = "Massa corporal (g)",
+         title = "Distribuição da massa por espécie") +
+    theme_bw(base_size = 20)
 
 ## exercicio 12 ----
 # Crie um boxplot da massa corporal por espécie e sexo.
