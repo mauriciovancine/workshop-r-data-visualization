@@ -6,8 +6,8 @@
 <script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-c6982bbdd90c704a9b15aa23d87ad911.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.2">
 
   <meta name="author" content="Maurício Vancine">
   <title>Visualização de dados em R</title>
@@ -251,12 +251,23 @@
 </div></div>
 </section>
 <section class="slide level2">
+<h2>Repositório do GitHub</h2>
+<p><br></p>
+<p><a href="https://github.com/mauriciovancine/workshop-r-data-visualization">https://github.com/mauriciovancine/workshop-r-data-visualization</a></p>
+<center>
+<img src="img/github_logo2.png" style="width:60%">
+</center>
+<div class="footer">
+<p><a href="https://github.com/mauriciovancine/workshop-r-data-visualization">workshop-r-data-visualization</a></p>
+</div>
+</section>
+<section class="slide level2">
 <h2>Script</h2>
 <p>Abram o script</p>
 <p><br><br><br><br></p>
 <p><code>script_r.R</code></p>
 <div class="footer">
-<p><a href="https://github.com/course-intror/scripts">course-intror - scripts</a></p>
+<p><a href="https://github.com/workshop-r-data-manipulation/01_scripts/script_r.R">workshop-r-data-manipulation - scripts</a></p>
 </div>
 </section></section>
 <section>
@@ -2671,10 +2682,30 @@
 <p><a href="https://dreamrs.shinyapps.io/esquisse/">esquisse - shiny</a></p>
 </div>
 </section></section>
+<section>
 <section class="title-slide slide level1 center">
 <h1>Dúvidas?</h1>
 
 </section>
+<section class="slide level2">
+<h2>Muito obrigado!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Agradecimentos</strong>:</p>
+<ul>
+<li><a href="https://beatrizmilz.com/">Beatriz Milz</a></li>
+</ul>
+<p><img data-src="img/fapesp.png" class="absolute" style="top: 350px; right: 650px; width: 40%; "></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Contato</strong>:</p>
+<p><a href="">mauricio.vancine@gmail.com</a> <a href="https://mauriciovancine.github.io">mauriciovancine.github.io</a></p>
+<p><img data-src="img/gif_frogs.gif" class="absolute" style="top: 260px; right: 90px; width: 40%; "></p>
+</div></div>
+<div class="footer">
+<p>Slides por <a href="https://mauriciovancine.github.io">Maurício Vancine</a>, feitos com <a href="https://quarto.org/">Quarto</a>. Código disponível no <a href="https://github.com/mauriciovancine/workshop-git-github-rstudio">GitHub</a>.</p>
+</div>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="https://www.r-project.org/logo/Rlogo.svg" class="slide-logo"></p>
@@ -2894,80 +2925,42 @@
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

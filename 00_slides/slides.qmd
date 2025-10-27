@@ -63,6 +63,19 @@ lang: pt
 ::::
 :::::::
 
+## Repositório do GitHub
+
+<br>
+
+[https://github.com/mauriciovancine/workshop-r-data-visualization](https://github.com/mauriciovancine/workshop-r-data-visualization)
+
+<center>
+<img src="img/github_logo2.png" style="width:60%"/>
+</center>
+
+::: footer
+[workshop-r-data-visualization](https://github.com/mauriciovancine/workshop-r-data-visualization)
+:::
 
 ## Script
 
