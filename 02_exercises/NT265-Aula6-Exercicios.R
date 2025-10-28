@@ -44,8 +44,6 @@ penguins
 # Crie uma tabela de frequência mostrando a proporção de pinguins por ilhas e 
 # depois use o ggpie para criar um gráfico de setores (pizza).
 
-# calculo da proporcao
-
 
 ## exercicio 06 ----
 # use os mesmos dados para criar um gráfico de dunuts usando o ggdonutchart.
@@ -58,6 +56,7 @@ penguins
 ## exercicio 08 ----
 # Faça um gráfico de barras mostrando o número de indivíduos por ilha. Add
 # os numeros nas barras.
+
 
 ## exercicio 09 ----
 # Faça um gráfico de barras mostrando o número de indivíduos por ilha para cada sexo. Add
@@ -89,6 +88,7 @@ penguins
 ## exercicio 15 ----
 # Crie um gráfico de dispersão colorido por espécie e com formas por sexo.
 
+
 ## exercicio 16 ----
 # Adicione uma linha de tendência linear ao gráfico anterior. 
 # Dica: geom_smooth(method = "lm")
@@ -105,11 +105,12 @@ penguins
 
 
 ## exercicio 19 ----
-# Crie um gráfico de dispersão interativo com Plotly.
+# deixe o gráfico do ex. 15 interativo com plotly.
+# dica: atribua o grafico a um objeto e depois use a funcao plotly::ggplotly()
 
 
 ## exercicio 20 ----
-# Crie uma animação mostrando as espécies em sequência no gráfico de dispersão
-
+# Crie um grafico animado mostrando as espécies em sequência no gráfico do ex. 15
+# dica: + transition_states(species) e animate(nframes = 60, fps = 10)
 
 # end ---------------------------------------------------------------------

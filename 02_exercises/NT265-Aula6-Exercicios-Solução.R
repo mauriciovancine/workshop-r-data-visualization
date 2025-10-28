@@ -265,23 +265,25 @@ g2 <- ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
 ggpubr::ggarrange(g1, g2, ncol = 2, labels = c("A", "B"))
 
 ## exercicio 19 ----
-# Crie um gráfico de dispersão interativo com Plotly.
-p_static <- ggplot(penguins, 
-                   aes(x = bill_length_mm, y = bill_depth_mm,
-                       color = species)) +
-    geom_point(size = 3) +
-    labs(x = "Comprimento do bico (mm)", y = "Profundidade do bico (mm)",
-         title = "Gráfico interativo com Plotly") +
-    theme_classic(base_size = 20)
+# deixe o gráfico do ex. 15 interativo com plotly.
+# dica: atribua o grafico a um objeto e depois use a funcao plotly::ggplotly()
+p_static <- ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm,
+                                 color = species, shape = sex)) +
+    geom_point(size = 3, alpha = 0.8) +
+    labs(x = "Bico (mm)", y = "Nadadeira (mm)",
+         title = "Dispersão por espécie e sexo") +
+    theme_bw(base_size = 20)
 
-ggplotly(p_static)
+plotly::ggplotly(p_static)
 
 ## exercicio 20 ----
-# Crie uma animação mostrando as espécies em sequência no gráfico de dispersão
-p_anim <- ggplot(penguins, aes(bill_length_mm, flipper_length_mm, color = species)) +
-    geom_point(size = 3) +
-    labs(title = "Espécie: {closest_state}",
-         x = "Comprimento do bico (mm)", y = "Comprimento da nadadeira (mm)") +
+# Crie um grafico animado mostrando as espécies em sequência no gráfico do ex. 15
+# dica: + transition_states(species) e animate(nframes = 60, fps = 10)
+p_anim <- ggplot(penguins, 
+                 aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
+    geom_point(size = 3, alpha = 0.8) +
+    labs(x = "Bico (mm)", y = "Nadadeira (mm)",
+         title = "Dispersão por espécie e sexo") +
     theme_bw(base_size = 20) +
     transition_states(species)
 
