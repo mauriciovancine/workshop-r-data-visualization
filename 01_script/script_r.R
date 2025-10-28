@@ -242,6 +242,15 @@ ggplot_densidade
 ggsave(filename = "density_ggplot2.png", 
        plot = ggplot_densidade, wi = 20, he = 15, 
        un = "cm", dpi = 300)
+system('open "density_ggplot2.png"')
+
+ggsave("density_ggplot2.pdf", 
+       plot = ggplot_densidade, device = "pdf", wi = 20, he = 15, units = "cm")
+system('open "density_ggplot2.pdf"')
+
+ggsave(filename = "density_ggplot2.svg", 
+       plot = ggpubr_densidade, wi = 20, he = 15, un = "cm")
+system('open "density_ggplot2.svg"')
 
 ## ggpubr ----
 gghistogram(data = penguins, 
@@ -273,6 +282,15 @@ ggpubr_densidade <- ggdensity(data = penguins,
 
 ggsave(filename = "densidade_ggpubr.png", 
        plot = ggpubr_densidade, wi = 20, he = 15, un = "cm", dpi = 300)
+system('open "densidade_ggpubr.png"')
+
+ggsave(filename = "densidade_ggpubr.pdf", 
+       plot = ggpubr_densidade, wi = 20, he = 15, un = "cm")
+system('open "densidade_ggpubr.pdf"')
+
+ggsave(filename = "densidade_ggpubr.svg", 
+       plot = ggpubr_densidade, wi = 20, he = 15, un = "cm")
+system('open "densidade_ggpubr.svg"')
 
 # grafico de setores ---------------------------------------------------
 

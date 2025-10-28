@@ -95,16 +95,11 @@ Abram o script
 ## Contextualização
 
 ::: incremental
-* **Melhor forma** de apresentar, sintetizar, discutir e interpretar seus **dados**
-
-* **Necessário** em quase todas as **análises estatísticas**
-
-* **Necessário** em quase todas as publicações, trabalhos de consultoria, TCC, dissertação, tese, etc.
-
-* Existem **vários tipos de gráficos** para representar os padrões em seus dados para diferentes tipos de finalidades
-
-* De forma simplificada, os gráficos são **representações** dos nossos **dados tabulares**
-
+- **Melhor forma** de apresentar, sintetizar, discutir e interpretar seus **dados**
+- **Necessário** em quase todas as **análises estatísticas**
+- **Necessário** em quase todas as publicações, trabalhos de consultoria, TCC, dissertação, tese, etc.
+- Existem **vários tipos de gráficos** para representar os padrões em seus dados para diferentes tipos de finalidades
+- De forma simplificada, os gráficos são **representações** dos nossos **dados tabulares**
 :::
 
 ## Como mentir com estatística?
@@ -121,28 +116,18 @@ Abram o script
 
 ::: incremental
 ::: {style="font-size: 65%;"}
--   [graphics](http://search.r-project.org/R/library/graphics/html/00Index.html): simples e útil para visualizações rápidas
-
+- [graphics](http://search.r-project.org/R/library/graphics/html/00Index.html): simples e útil para visualizações rápidas
 - [lattice](https://lattice.r-forge.r-project.org/): integração a modelos estatísticos
-
--   [ggplot2](https://ggplot2.tidyverse.org/): integrado ao tidyverse, possui uma sintaxe própria baseada na gramática de gráficos por camadas (*layers*)
-
--   [ggplot2 extentions](https://exts.ggplot2.tidyverse.org/): conjunto de pacotes com diversas expansões ao pacote [ggplot2](https://ggplot2.tidyverse.org/). Exemplos: [GGally](https://ggobi.github.io/ggally/), [gganimate](https://gganimate.com/) e [esquisse](https://dreamrs.github.io/esquisse/)
-
+- [ggplot2](https://ggplot2.tidyverse.org/): integrado ao tidyverse, possui uma sintaxe própria baseada na gramática de gráficos por camadas (*layers*)
+- [ggplot2 extentions](https://exts.ggplot2.tidyverse.org/): conjunto de pacotes com diversas expansões ao pacote [ggplot2](https://ggplot2.tidyverse.org/). Exemplos: [GGally](https://ggobi.github.io/ggally/), [gganimate](https://gganimate.com/) e [esquisse](https://dreamrs.github.io/esquisse/)
 - [ggdist](https://mjskay.github.io/ggdist): visualizar distribuições e incertezas
-
--   [visdat](https://docs.ropensci.org/visdat/), [corrplot](https://github.com/taiyun/corrplot) e [DataExplorer](https://boxuancui.github.io/DataExplorer/): visualizações preliminares de conjuntos de dados
-
--   [ggpubr](https://rpkgs.datanovia.com/ggpubr/): fornece funções simplificadas para criar gráficos para publicação
-
+- [visdat](https://docs.ropensci.org/visdat/), [corrplot](https://github.com/taiyun/corrplot) e [DataExplorer](https://boxuancui.github.io/DataExplorer/): visualizações preliminares de conjuntos de dados
+- [ggpubr](https://rpkgs.datanovia.com/ggpubr/): fornece funções simplificadas para criar gráficos para publicação
 - [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot): gráficos com detalhes de testes estatísticos
-
--   [cowplot](https://wilkelab.org/cowplot/) e [patchwork](https://patchwork.data-imaginist.com/): permite combinar vários gráficos
-
+- [cowplot](https://wilkelab.org/cowplot/) e [patchwork](https://patchwork.data-imaginist.com/): permite combinar vários gráficos
 - [plotly](https://plotly.com/r/): gráficos interativos usando JavaScript (*plotly.js*)
-
 - [echarts4r](https://echarts4r.john-coene.com): gráficos interativos dentro do Shiny
-
+- [scico](https://github.com/thomasp85/scico): paleta de cores do "Scientific Colour-Maps"
 - [cols4all](https://cols4all.github.io/cols4all-R/index.html): escolha de paleta de cores
 :::
 :::
@@ -152,19 +137,13 @@ Abram o script
 <br>
 
 - [graphics](http://search.r-project.org/R/library/graphics/html/00Index.html)
-
 - [ggplot2](https://ggplot2.tidyverse.org/)
-
 - [ggpubr](https://rpkgs.datanovia.com/ggpubr/)
-
+- [scico](https://github.com/thomasp85/scico)
 - [cols4all](https://cols4all.github.io/cols4all-R/index.html)
-
 - [GGally](https://ggobi.github.io/ggally/)
-
 - [gganimate](https://gganimate.com/)
-
 - [plotly](https://plotly.com/r/)
-
 - [esquisse](https://dreamrs.github.io/esquisse/)
 
 # 
@@ -216,9 +195,7 @@ library(palmerpenguins)
 ## graphics {.smaller}
 
 -   Default do R e mais simples
-
 -   Pode ser utilizado para objetos de diversas classes
-
 -   Funções:
 
 <br>
@@ -249,9 +226,7 @@ plot(flipper_length_mm ~ body_mass_g, data = penguins)
 ## ggplot2 {.smaller}
 
 -   Integrado ao `tidyverse`, possui uma sintaxe própria de camadas (*layers*)
-
 -   Necessita de funções específicas para objetos de classes diferentes
-
 -   Funções:
 
 ::::: columns
@@ -281,9 +256,7 @@ ggplot(data = penguins) + aes(x = body_mass_g, y = flipper_length_mm) + geom_poi
 ## ggpubr {.smaller}
 
 -   Funções para criar e personalizar plots para publicações baseadas no [ggplot2](https://ggplot2.tidyverse.org/)
-
 -   Necessita de funções específicas para gerar gráficos específicos
-
 -   Funções:
 
 ::::: columns
@@ -365,7 +338,7 @@ Wickham (2008) criou o pacote `ggplot2`, onde "gg" representa a contração de *
 
 ## Paleta de cores
 
-**Tipos de Paletas**
+**Tipos de paletas de cores**
 
 ::: {style="font-size: 55%;"}
 | Tipo | Uso                        | Exemplo             |
@@ -381,6 +354,39 @@ Wickham (2008) criou o pacote `ggplot2`, onde "gg" representa a contração de *
 
 ::: footer
 [Elegant and informative maps with tmap (2021)](https://r-tmap.github.io/tmap-book/visual-variables.html)
+:::
+
+## Paleta de cores
+
+**scico**
+
+::: {style="font-size: 70%;"}
+- Escalas de **cores uniformes** (n = 39), ideais para **dados contínuos**
+- Compatível com `ggplot2`, mapas e gráficos **acessíveis e consistentes**
+:::
+
+![](img/scico.png){.absolute width=400 right=630 top=280}
+![](img/scico_colors01.webp){.absolute width=380 right=250 top=270}
+![](img/scico_colors02.webp){.absolute width=390 right=-120 top=270}
+
+::: footer
+[scico](https://github.com/thomasp85/scico), [Scientific colour maps](https://www.fabiocrameri.ch/colourmaps/)
+:::
+
+## Paleta de cores
+
+**scico**
+
+::: {style="font-size: 70%;"}
+- Escalas de cores uniformes (n = 39), ideais para dados contínuos
+- Compatível com `ggplot2`, mapas e gráficos acessíveis e consistentes 
+:::
+
+![](img/scico.png){.absolute width=400 right=630 top=280}
+![](img/scico_colors03.webp){.absolute width=600 right=0 top=260}
+
+::: footer
+[scico](https://github.com/thomasp85/scico), [Scientific colour maps](https://www.fabiocrameri.ch/colourmaps/)
 :::
 
 ## Paleta de cores
@@ -884,7 +890,7 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm)) +
-  geom_histogram()
+    geom_histogram()
 ```
 :::
 
@@ -895,7 +901,7 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins,
        aes(x = flipper_length_mm)) +
-  geom_histogram()
+    geom_histogram()
 ```
 :::
 :::::
@@ -910,7 +916,7 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm)) +
-  geom_histogram(color = "black", fill = "cyan4", bins = 10)
+    geom_histogram(color = "black", fill = "cyan4", bins = 10)
 ```
 :::
 
@@ -921,7 +927,7 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm)) +
-  geom_histogram(color = "black", fill = "cyan4", bins = 10)
+    geom_histogram(color = "black", fill = "cyan4", bins = 10)
 ```
 :::
 :::::
@@ -936,12 +942,12 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm)) +
-  geom_histogram(color = "black", fill = "cyan4", 
-                 bins = 10, alpha = .5) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(color = "black", fill = "cyan4", 
+                   bins = 10, alpha = .5) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -952,12 +958,12 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm)) +
-  geom_histogram(color = "black", fill = "cyan4", 
-                 bins = 10, alpha = .5) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(color = "black", fill = "cyan4", 
+                   bins = 10, alpha = .5) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -972,12 +978,12 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram(bins = 10, alpha = .5) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(bins = 10, alpha = .5) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -988,12 +994,12 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram(bins = 10, alpha = .5) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(bins = 10, alpha = .5) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1008,12 +1014,12 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram(bins = 10, alpha = .5, position = "dodge") +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(bins = 10, alpha = .5, position = "dodge") +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -1024,12 +1030,12 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram(bins = 10, alpha = .5, position = "dodge") +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(bins = 10, alpha = .5, position = "dodge") +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1044,13 +1050,13 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram(alpha = .5, position = "identity") +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(alpha = .5, position = "identity") +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -1061,13 +1067,13 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram(alpha = .5, position = "identity") +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram(alpha = .5, position = "identity") +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1082,14 +1088,14 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram() +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  facet_wrap(~ species, ncol = 2, scale = "free_y") +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram() +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    facet_wrap(~ species, ncol = 2, scale = "free_y") +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -1100,14 +1106,14 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram() +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  facet_wrap(~ species, ncol = 2, scale = "free_y") +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram() +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    facet_wrap(~ species, ncol = 2, scale = "free_y") +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1122,14 +1128,14 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram() +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  facet_grid(species ~ .) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram() +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    facet_grid(species ~ .) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -1140,14 +1146,14 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_histogram() +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  facet_grid(species ~ .) +
-  labs(title = "Comprimento da nadadeira dos penguins",
-       fill = "Espécies",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Frequência") +
-  theme_bw(base_size = 20)
+    geom_histogram() +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    facet_grid(species ~ .) +
+    labs(title = "Comprimento da nadadeira dos penguins",
+         fill = "Espécies",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Frequência") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1161,12 +1167,12 @@ ggplot(data = penguins,
 ```{r}
 #| eval: false
 ggplot(data = penguins) +
-  aes(x = flipper_length_mm) +
-  geom_density(color = "black", fill = "cyan4", alpha = .5) + 
-  labs(title = "Comprimento da nadadeira dos penguins",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Densidade") +
-  theme_bw(base_size = 20)
+    aes(x = flipper_length_mm) +
+    geom_density(color = "black", fill = "cyan4", alpha = .5) + 
+    labs(title = "Comprimento da nadadeira dos penguins",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -1176,12 +1182,12 @@ ggplot(data = penguins) +
 #| echo: false
 #| fig-weight: 15
 ggplot(data = penguins) +
-  aes(x = flipper_length_mm) +
-  geom_density(color = "black", fill = "cyan4", alpha = .5) + 
-  labs(title = "Comprimento da nadadeira dos penguins",
-       x = "Comprimento da nadadeira (mm)", 
-       y = "Densidade") +
-  theme_bw(base_size = 20)
+    aes(x = flipper_length_mm) +
+    geom_density(color = "black", fill = "cyan4", alpha = .5) + 
+    labs(title = "Comprimento da nadadeira dos penguins",
+         x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1196,12 +1202,12 @@ ggplot(data = penguins) +
 #| eval: false
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_density(alpha = .5) +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  labs(x = "Comprimento da nadadeira (mm)", 
-       y = "Densidade", 
-       fill = "Espécie") +
-  theme_bw(base_size = 20)
+    geom_density(alpha = .5) +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade", 
+         fill = "Espécie") +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -1212,12 +1218,12 @@ ggplot(data = penguins,
 #| fig-weight: 15
 ggplot(data = penguins, 
        aes(x = flipper_length_mm, fill = species)) +
-  geom_density(alpha = .5) +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  labs(x = "Comprimento da nadadeira (mm)", 
-       y = "Densidade", 
-       fill = "Espécie") +
-  theme_bw(base_size = 20)
+    geom_density(alpha = .5) +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade", 
+         fill = "Espécie") +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -1230,15 +1236,56 @@ ggplot(data = penguins,
 #| eval: false
 ggplot_densidade <- ggplot(data = penguins, 
                            aes(x = flipper_length_mm, fill = species)) +
-  geom_density(alpha = .5) +
-  scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
-  labs(x = "Comprimento da nadadeira (mm)", 
-       y = "Densidade", 
-       fill = "Espécie") +
-  theme_bw(base_size = 20)
+    geom_density(alpha = .5) +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade", 
+         fill = "Espécie") +
+    theme_bw(base_size = 20)
 
-ggsave(filename = "density_ggplot2.png", 
-       plot = ggplot_densidade, wi = 20, he = 15, un = "cm", dpi = 300)
+ggsave(filename = "density_ggplot2.png", plot = ggplot_densidade, 
+       wi = 20, he = 15, un = "cm", dpi = 300)
+system('open "density_ggplot2.png"')
+```
+
+## Densidade (*Density*)
+
+**ggplot2**
+
+```{r}
+#| eval: false
+ggplot_densidade <- ggplot(data = penguins, 
+                           aes(x = flipper_length_mm, fill = species)) +
+    geom_density(alpha = .5) +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade", 
+         fill = "Espécie") +
+    theme_bw(base_size = 20)
+
+ggsave(filename = "density_ggplot2.pdf", plot = ggplot_densidade, 
+       device = "pdf", wi = 20, he = 15, units = "cm")
+system('open "density_ggplot2.pdf"')
+```
+
+## Densidade (*Density*)
+
+**ggplot2**
+
+```{r}
+#| eval: false
+ggplot_densidade <- ggplot(data = penguins, 
+                           aes(x = flipper_length_mm, fill = species)) +
+    geom_density(alpha = .5) +
+    scale_fill_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+    labs(x = "Comprimento da nadadeira (mm)", 
+         y = "Densidade", 
+         fill = "Espécie") +
+    theme_bw(base_size = 20)
+
+ggsave(filename = "density_ggplot2.svg", plot = ggplot_densidade, 
+       wi = 20, he = 15, units = "cm")
+system('open "density_ggplot2.svg"')
 ```
 
 # 
@@ -1336,8 +1383,48 @@ ggpubr_densidade <- ggdensity(data = penguins,
                               xlab = "Comprimento da nadadeira (mm)",
                               ylab = "Densidade")
 
-ggsave(filename = "densidade_ggpubr.png", 
-       plot = ggpubr_densidade, wi = 20, he = 15, un = "cm", dpi = 300)
+ggsave(filename = "densidade_ggpubr.png", plot = ggpubr_densidade, 
+       wi = 20, he = 15, un = "cm", dpi = 300)
+```
+
+## Histograma (*Histogram*)
+
+**ggpubr**
+
+```{r}
+#| eval: false
+ggpubr_densidade <- ggdensity(data = penguins,
+                              x = "flipper_length_mm",
+                              add = "median",
+                              color = "species",
+                              fill = "species",
+                              palette = c("darkorange", "darkorchid", "cyan4"),
+                              xlab = "Comprimento da nadadeira (mm)",
+                              ylab = "Densidade")
+
+ggsave(filename = "density_ggplot2.pdf", plot = ggplot_densidade, 
+       device = "pdf", wi = 20, he = 15, units = "cm")
+system('open "density_ggplot2.pdf"')
+```
+
+## Histograma (*Histogram*)
+
+**ggpubr**
+
+```{r}
+#| eval: false
+ggpubr_densidade <- ggdensity(data = penguins,
+                              x = "flipper_length_mm",
+                              add = "median",
+                              color = "species",
+                              fill = "species",
+                              palette = c("darkorange", "darkorchid", "cyan4"),
+                              xlab = "Comprimento da nadadeira (mm)",
+                              ylab = "Densidade")
+
+ggsave(filename = "density_ggplot2.svg", plot = ggpubr_densidade, 
+       wi = 20, he = 15, un = "cm")
+system('open "density_ggplot2.svg"')
 ```
 
 # Gráfico de setores <br> (*Pie chart*)
@@ -1403,8 +1490,8 @@ pie(c(280, 60, 20),
 ```{r}
 # calculo da proporcao
 penguins_prop <- penguins %>%
-  dplyr::count(species) %>% 
-  dplyr::mutate(prop = round(n/sum(n), 4)*100)
+    dplyr::count(species) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
 penguins_prop
 ```
 
@@ -1433,8 +1520,8 @@ legend("topright", legend = penguins_prop$species,
 #| fig-weight: 15
 
 penguins_prop <- penguins %>%
-  dplyr::count(species) %>% 
-  dplyr::mutate(prop = round(n/sum(n), 4)*100)
+    dplyr::count(species) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
 
 par(mar = c(5, 5, 5, 5))
 pie(penguins_prop$prop,
@@ -1465,13 +1552,13 @@ legend("topright", legend = penguins_prop$species,
 #| eval: false
 ggplot(data = penguins_prop, 
        aes(x = "", y = prop, fill = species)) + 
-  geom_bar(stat = "identity", color = "white") +
-  coord_polar("y", start = 0) +
-  geom_text(aes(label = paste0(prop, "%")), color = "white", 
-            position = position_stack(vjust = .5), size = 8) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_void() +
-  labs(fill = "Espécie")
+    geom_bar(stat = "identity", color = "white") +
+    coord_polar("y", start = 0) +
+    geom_text(aes(label = paste0(prop, "%")), color = "white", 
+              position = position_stack(vjust = .5), size = 8) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_void() +
+    labs(fill = "Espécie")
 ```
 :::
 
@@ -1482,18 +1569,18 @@ ggplot(data = penguins_prop,
 #| fig-weight: 15
 
 penguins_prop <- penguins %>%
-  dplyr::count(species) %>% 
-  dplyr::mutate(prop = round(n/sum(n), 4)*100)
+    dplyr::count(species) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
 
 ggplot(data = penguins_prop, 
        aes(x = "", y = prop, fill = species)) + 
-  geom_bar(stat = "identity", color = "white") +
-  coord_polar("y", start = 0) +
-  geom_text(aes(label = paste0(prop, "%")), color = "white", 
-            position = position_stack(vjust = .5), size = 8) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_void() +
-  labs(fill = "Espécie")
+    geom_bar(stat = "identity", color = "white") +
+    coord_polar("y", start = 0) +
+    geom_text(aes(label = paste0(prop, "%")), color = "white", 
+              position = position_stack(vjust = .5), size = 8) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_void() +
+    labs(fill = "Espécie")
 ```
 :::
 :::::
@@ -1532,8 +1619,8 @@ ggpie(penguins_prop,
 #| fig-weight: 15
 
 penguins_prop <- penguins %>%
-  dplyr::count(species) %>% 
-  dplyr::mutate(prop = round(n/sum(n), 4)*100)
+    dplyr::count(species) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
 
 ggpie(penguins_prop,
       "prop", 
@@ -1582,17 +1669,17 @@ ggpie(penguins_prop,
 ```{r}
 #| eval: false
 ggplot(data = penguins_prop, aes(x = 2, y = prop, fill = species)) +
-  geom_bar(stat = "identity") +
-  coord_polar(theta = "y", start = 0) +
-  geom_text(aes(label = paste0(prop, "%")), color = "white",
-            position = position_stack(vjust = .5), size = 5) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  xlim(0, 2.5) +
-  theme_void() +
-  theme(legend.position = c(.5, .5),
-        legend.title = element_text(size = 20),
-        legend.text = element_text(size = 15)) +
-  labs(fill = "Espécie")
+    geom_bar(stat = "identity") +
+    coord_polar(theta = "y", start = 0) +
+    geom_text(aes(label = paste0(prop, "%")), color = "white",
+              position = position_stack(vjust = .5), size = 5) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    xlim(0, 2.5) +
+    theme_void() +
+    theme(legend.position = c(.5, .5),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 15)) +
+    labs(fill = "Espécie")
 ```
 :::
 
@@ -1602,21 +1689,21 @@ ggplot(data = penguins_prop, aes(x = 2, y = prop, fill = species)) +
 #| echo: false
 #| fig-weight: 15
 penguins_prop <- penguins %>%
-  dplyr::count(species) %>% 
-  dplyr::mutate(prop = round(n/sum(n), 4)*100)
+    dplyr::count(species) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
 
 ggplot(data = penguins_prop, aes(x = 2, y = prop, fill = species)) +
-  geom_bar(stat = "identity") +
-  coord_polar(theta = "y", start = 0) +
-  geom_text(aes(label = paste0(prop, "%")), color = "white",
-            position = position_stack(vjust = .5), size = 5) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  xlim(0, 2.5) +
-  theme_void() +
-  theme(legend.position = c(.5, .5),
-        legend.title = element_text(size = 20),
-        legend.text = element_text(size = 15)) +
-  labs(fill = "Espécie")
+    geom_bar(stat = "identity") +
+    coord_polar(theta = "y", start = 0) +
+    geom_text(aes(label = paste0(prop, "%")), color = "white",
+              position = position_stack(vjust = .5), size = 5) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    xlim(0, 2.5) +
+    theme_void() +
+    theme(legend.position = c(.5, .5),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 15)) +
+    labs(fill = "Espécie")
 ```
 :::
 :::::
@@ -1655,8 +1742,8 @@ ggdonutchart(penguins_prop,
 #| fig-weight: 15
 
 penguins_prop <- penguins %>%
-  dplyr::count(species) %>% 
-  dplyr::mutate(prop = round(n/sum(n), 4)*100)
+    dplyr::count(species) %>% 
+    dplyr::mutate(prop = round(n/sum(n), 4)*100)
 
 ggdonutchart(penguins_prop,
              "prop", 
@@ -1693,7 +1780,7 @@ ggdonutchart(penguins_prop,
 ```{r}
 # numero de individuos coletados
 penguins_count <- penguins %>%
-  dplyr::count(species)
+    dplyr::count(species)
 penguins_count
 ```
 
@@ -1732,7 +1819,7 @@ barplot(n ~ species,
 #| fig-weight: 15
 
 penguins_count <- penguins %>%
-  dplyr::count(species)
+    dplyr::count(species)
 
 barplot(n ~ species,
         data = penguins_count, 
@@ -1765,14 +1852,14 @@ barplot(n ~ species,
 #| eval: false
 ggplot(data = penguins_count, 
        aes(x = species, y = n, fill = species)) +
-  geom_bar(stat = "identity") +
-  geom_label(aes(label = n), fill = "white", size = 10) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  theme(legend.position = "none") +
-  labs(x = "Espécie", 
-       y = "Número de indivíduos", 
-       fill = "Espécie")
+    geom_bar(stat = "identity") +
+    geom_label(aes(label = n), fill = "white", size = 10) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    theme(legend.position = "none") +
+    labs(x = "Espécie", 
+         y = "Número de indivíduos", 
+         fill = "Espécie")
 ```
 :::
 
@@ -1783,18 +1870,18 @@ ggplot(data = penguins_count,
 #| fig-weight: 15
 
 penguins_count <- penguins %>%
-  dplyr::count(species)
+    dplyr::count(species)
 
 ggplot(data = penguins_count, 
        aes(x = species, y = n, fill = species)) +
-  geom_bar(stat = "identity") +
-  geom_label(aes(label = n), fill = "white", size = 10) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  theme(legend.position = "none") +
-  labs(x = "Espécie", 
-       y = "Número de indivíduos", 
-       fill = "Espécie")
+    geom_bar(stat = "identity") +
+    geom_label(aes(label = n), fill = "white", size = 10) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    theme(legend.position = "none") +
+    labs(x = "Espécie", 
+         y = "Número de indivíduos", 
+         fill = "Espécie")
 ```
 :::
 :::::
@@ -1809,15 +1896,15 @@ ggplot(data = penguins_count,
 #| eval: false
 ggplot(data = penguins_count, 
        aes(x = species, y = n, fill = species)) +
-  geom_bar(stat = "identity") +
-  geom_label(aes(label = n), fill = "white", size = 10) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  coord_flip() +
-  theme_bw(base_size = 15) +
-  theme(legend.position = "none") +
-  labs(x = "Espécie", 
-       y = "Número de indivíduos", 
-       fill = "Espécie")
+    geom_bar(stat = "identity") +
+    geom_label(aes(label = n), fill = "white", size = 10) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    coord_flip() +
+    theme_bw(base_size = 15) +
+    theme(legend.position = "none") +
+    labs(x = "Espécie", 
+         y = "Número de indivíduos", 
+         fill = "Espécie")
 ```
 :::
 
@@ -1828,19 +1915,19 @@ ggplot(data = penguins_count,
 #| fig-weight: 15
 
 penguins_count <- penguins %>%
-  dplyr::count(species)
+    dplyr::count(species)
 
 ggplot(data = penguins_count, 
        aes(x = species, y = n, fill = species)) +
-  geom_bar(stat = "identity") +
-  geom_label(aes(label = n), fill = "white", size = 10) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  coord_flip() +
-  theme_bw(base_size = 15) +
-  theme(legend.position = "none") +
-  labs(x = "Espécie", 
-       y = "Número de indivíduos", 
-       fill = "Espécie")
+    geom_bar(stat = "identity") +
+    geom_label(aes(label = n), fill = "white", size = 10) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    coord_flip() +
+    theme_bw(base_size = 15) +
+    theme(legend.position = "none") +
+    labs(x = "Espécie", 
+         y = "Número de indivíduos", 
+         fill = "Espécie")
 ```
 :::
 :::::
@@ -1885,7 +1972,7 @@ ggbarplot(penguins_count,
 #| fig-weight: 15
 
 penguins_count <- penguins %>%
-  dplyr::count(species)
+    dplyr::count(species)
 
 ggbarplot(penguins_count,
           x = "species",
@@ -1938,7 +2025,7 @@ ggbarplot(penguins_count,
 #| fig-weight: 15
 
 penguins_count <- penguins %>%
-  dplyr::count(species)
+    dplyr::count(species)
 
 ggbarplot(penguins_count,
           x = "species",
@@ -1993,23 +2080,23 @@ ggbarplot(penguins_count,
 #| eval: false
 
 penguins_flipper_length_mn_sd <- penguins %>%
-  dplyr::group_by(species) %>% 
-  dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
-                   sd = sd(flipper_length_mm, na.rm = TRUE))
+    dplyr::group_by(species) %>% 
+    dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
+                     sd = sd(flipper_length_mm, na.rm = TRUE))
 
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  stat_summary(fun = mean,
-               geom = "col",
-               color = "black",
-               show.legend = FALSE) +
-  stat_summary(fun.data = mean_se,
-               geom = "errorbar",
-               width = 0.15,
-               linewidth = 0.8) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    stat_summary(fun = mean,
+                 geom = "col",
+                 color = "black",
+                 show.legend = FALSE) +
+    stat_summary(fun.data = mean_se,
+                 geom = "errorbar",
+                 width = 0.15,
+                 linewidth = 0.8) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ```
 :::
 
@@ -2020,23 +2107,23 @@ ggplot(data = penguins,
 #| fig-weight: 15
 
 penguins_flipper_length_mn_sd <- penguins %>%
-  dplyr::group_by(species) %>% 
-  dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
-                   sd = sd(flipper_length_mm, na.rm = TRUE))
+    dplyr::group_by(species) %>% 
+    dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
+                     sd = sd(flipper_length_mm, na.rm = TRUE))
 
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  stat_summary(fun = mean,
-               geom = "col",
-               color = "black",
-               show.legend = FALSE) +
-  stat_summary(fun.data = mean_se,
-               geom = "errorbar",
-               width = 0.15,
-               linewidth = 0.8) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    stat_summary(fun = mean,
+                 geom = "col",
+                 color = "black",
+                 show.legend = FALSE) +
+    stat_summary(fun.data = mean_se,
+                 geom = "errorbar",
+                 width = 0.15,
+                 linewidth = 0.8) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ```
 :::
 :::::
@@ -2051,9 +2138,9 @@ ggplot(data = penguins,
 #| eval: false
 
 penguins_flipper_length_mn_sd <- penguins %>%
-  dplyr::group_by(species) %>% 
-  dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
-                   sd = sd(flipper_length_mm, na.rm = TRUE))
+    dplyr::group_by(species) %>% 
+    dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
+                     sd = sd(flipper_length_mm, na.rm = TRUE))
 
 ggbarplot(penguins,
           x = "species",
@@ -2077,9 +2164,9 @@ ggbarplot(penguins,
 #| fig-weight: 15
 
 penguins_flipper_length_mn_sd <- penguins %>%
-  dplyr::group_by(species) %>% 
-  dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
-                   sd = sd(flipper_length_mm, na.rm = TRUE))
+    dplyr::group_by(species) %>% 
+    dplyr::summarise(mean = mean(flipper_length_mm, na.rm = TRUE),
+                     sd = sd(flipper_length_mm, na.rm = TRUE))
 
 ggbarplot(penguins,
           x = "species",
@@ -2266,11 +2353,11 @@ boxplot(flipper_length_mm ~ as.factor(species),
 #| eval: false
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot(width = .3, 
-               show.legend = FALSE) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    geom_boxplot(width = .3, 
+                 show.legend = FALSE) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ```
 :::
 
@@ -2282,11 +2369,11 @@ ggplot(data = penguins,
 
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot(width = .3, 
-               show.legend = FALSE) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    geom_boxplot(width = .3, 
+                 show.legend = FALSE) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ```
 :::
 :::::
@@ -2301,14 +2388,14 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot(width = .3, 
-               show.legend = FALSE) +
-  geom_jitter(alpha = .5, 
-              show.legend = FALSE, 
-              position = position_jitter(width = .1, seed = 0)) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    geom_boxplot(width = .3, 
+                 show.legend = FALSE) +
+    geom_jitter(alpha = .5, 
+                show.legend = FALSE, 
+                position = position_jitter(width = .1, seed = 0)) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ```
 :::
 
@@ -2320,14 +2407,14 @@ ggplot(data = penguins,
 
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot(width = .3, 
-               show.legend = FALSE) +
-  geom_jitter(alpha = .5, 
-              show.legend = FALSE, 
-              position = position_jitter(width = .1, seed = 0)) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    geom_boxplot(width = .3, 
+                 show.legend = FALSE) +
+    geom_jitter(alpha = .5, 
+                show.legend = FALSE, 
+                position = position_jitter(width = .1, seed = 0)) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ```
 :::
 :::::
@@ -2342,14 +2429,14 @@ ggplot(data = penguins,
 #| eval: false
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_violin(width = .3, 
-              show.legend = FALSE) +
-  geom_jitter(alpha = .5, 
-              show.legend = FALSE, 
-              position = position_jitter(width = .1, seed = 0)) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(title = "Pontos com jitter", x = "Species", y = "Flipper length (mm)")
+    geom_violin(width = .3, 
+                show.legend = FALSE) +
+    geom_jitter(alpha = .5, 
+                show.legend = FALSE, 
+                position = position_jitter(width = .1, seed = 0)) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(title = "Pontos com jitter", x = "Species", y = "Flipper length (mm)")
 ```
 :::
 
@@ -2361,14 +2448,14 @@ ggplot(data = penguins,
 
 ggplot(data = penguins, 
        aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_violin(width = .3, 
-              show.legend = FALSE) +
-  geom_jitter(alpha = .5, 
-              show.legend = FALSE, 
-              position = position_jitter(width = .1, seed = 0)) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(title = "Pontos com jitter", x = "Species", y = "Flipper length (mm)")
+    geom_violin(width = .3, 
+                show.legend = FALSE) +
+    geom_jitter(alpha = .5, 
+                show.legend = FALSE, 
+                position = position_jitter(width = .1, seed = 0)) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(title = "Pontos com jitter", x = "Species", y = "Flipper length (mm)")
 ```
 :::
 :::::
@@ -2563,13 +2650,13 @@ ggplot(data = penguins,
            y = bill_depth_mm,
            color = species,
            shape = species)) +
-  geom_point(size = 3, alpha = .8) +
-  scale_shape_manual(values = c(19, 15, 17)) +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies")
+    geom_point(size = 3, alpha = .8) +
+    scale_shape_manual(values = c(19, 15, 17)) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies")
 ```
 :::
 
@@ -2584,13 +2671,13 @@ ggplot(data = penguins,
            y = bill_depth_mm,
            color = species,
            shape = species)) +
-  geom_point(size = 3, alpha = .8) +
-  scale_shape_manual(values = c(19, 15, 17)) +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies")
+    geom_point(size = 3, alpha = .8) +
+    scale_shape_manual(values = c(19, 15, 17)) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies")
 ```
 :::
 :::::
@@ -2608,14 +2695,14 @@ ggplot(data = penguins,
            y = bill_depth_mm,
            color = species,
            shape = species)) +
-  geom_point(size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = FALSE) +
-  scale_shape_manual(values = c(19, 15, 17)) +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies")
+    geom_point(size = 3, alpha = .8) +
+    geom_smooth(method = "lm", se = FALSE) +
+    scale_shape_manual(values = c(19, 15, 17)) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies")
 ```
 :::
 
@@ -2630,14 +2717,14 @@ ggplot(data = penguins,
            y = bill_depth_mm,
            color = species,
            shape = species)) +
-  geom_point(size = 3, alpha = .8) +
-  geom_smooth(method = "lm", se = FALSE) +
-  scale_shape_manual(values = c(19, 15, 17)) +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies")
+    geom_point(size = 3, alpha = .8) +
+    geom_smooth(method = "lm", se = FALSE) +
+    scale_shape_manual(values = c(19, 15, 17)) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies")
 ```
 :::
 :::::
@@ -2667,12 +2754,12 @@ library(datasauRus)
 
 # data + plot
 datasaurus_dozen %>% 
-  dplyr::filter(dataset == "dino") %>% 
-  ggplot() +
-  aes(x = x, y = y) +
-  geom_point(colour = "black", fill = "black", 
-             size = 5, alpha = .75, pch = 21) +
-  theme_bw(base_size = 20)
+    dplyr::filter(dataset == "dino") %>% 
+    ggplot() +
+    aes(x = x, y = y) +
+    geom_point(colour = "black", fill = "black", 
+               size = 5, alpha = .75, pch = 21) +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -2687,12 +2774,12 @@ library(datasauRus)
 
 # data + plot
 datasaurus_dozen %>% 
-  dplyr::filter(dataset == "dino") %>% 
-  ggplot() +
-  aes(x = x, y = y) +
-  geom_point(colour = "black", fill = "black", 
-             size = 5, alpha = .75, pch = 21) +
-  theme_bw(base_size = 20)
+    dplyr::filter(dataset == "dino") %>% 
+    ggplot() +
+    aes(x = x, y = y) +
+    geom_point(colour = "black", fill = "black", 
+               size = 5, alpha = .75, pch = 21) +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -2706,12 +2793,12 @@ datasaurus_dozen %>%
 ```{r}
 #| eval: false
 datasaurus_dozen %>% 
-  ggplot() +
-  aes(x = x, y = y) +
-  geom_point(colour = "black", fill = "black", 
-             size = 1, alpha = .75, pch = 21) +
-  facet_wrap(~dataset) +
-  theme_bw(base_size = 20)
+    ggplot() +
+    aes(x = x, y = y) +
+    geom_point(colour = "black", fill = "black", 
+               size = 1, alpha = .75, pch = 21) +
+    facet_wrap(~dataset) +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -2722,12 +2809,12 @@ datasaurus_dozen %>%
 #| fig-weight: 15
 
 datasaurus_dozen %>% 
-  ggplot() +
-  aes(x = x, y = y) +
-  geom_point(colour = "black", fill = "black", 
-             size = 1, alpha = .75, pch = 21) +
-  facet_wrap(~dataset) +
-  theme_bw(base_size = 20)
+    ggplot() +
+    aes(x = x, y = y) +
+    geom_point(colour = "black", fill = "black", 
+               size = 1, alpha = .75, pch = 21) +
+    facet_wrap(~dataset) +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -2835,7 +2922,7 @@ ggscatter(data = penguins,
 ```{r}
 #| eval: false
 ggscatter(data = datasaurus_dozen %>% 
-            dplyr::filter(dataset == "dino"),
+              dplyr::filter(dataset == "dino"),
           x = "x", 
           y = "y",
           size = 5,
@@ -2851,7 +2938,7 @@ ggscatter(data = datasaurus_dozen %>%
 #| fig-weight: 15
 
 ggscatter(data = datasaurus_dozen %>% 
-            dplyr::filter(dataset == "dino"),
+              dplyr::filter(dataset == "dino"),
           x = "x", 
           y = "y",
           size = 5,
@@ -2929,9 +3016,9 @@ ggscatter(data = datasaurus_dozen,
 ```{r}
 #| eval: false
 penguins %>%
-  dplyr::select(body_mass_g, ends_with("_mm")) %>%
-  pairs(pch = 20,
-        upper.panel = NULL)
+    dplyr::select(body_mass_g, ends_with("_mm")) %>%
+    pairs(pch = 20,
+          upper.panel = NULL)
 ```
 :::
 
@@ -2942,9 +3029,9 @@ penguins %>%
 #| fig-weight: 15
 
 penguins %>%
-  dplyr::select(body_mass_g, ends_with("_mm")) %>%
-  pairs(pch = 20,
-        upper.panel = NULL)
+    dplyr::select(body_mass_g, ends_with("_mm")) %>%
+    pairs(pch = 20,
+          upper.panel = NULL)
 ```
 :::
 :::::
@@ -2970,9 +3057,9 @@ penguins %>%
 library(GGally)
 
 penguins %>%
-  dplyr::select(body_mass_g, ends_with("_mm")) %>%
-  ggpairs() +
-  theme_bw(base_size = 20)
+    dplyr::select(body_mass_g, ends_with("_mm")) %>%
+    ggpairs() +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -2987,9 +3074,9 @@ penguins %>%
 library(GGally)
 
 penguins %>%
-  dplyr::select(body_mass_g, ends_with("_mm")) %>%
-  ggpairs() +
-  theme_bw(base_size = 20)
+    dplyr::select(body_mass_g, ends_with("_mm")) %>%
+    ggpairs() +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -3004,11 +3091,11 @@ penguins %>%
 #| eval: false
 
 penguins %>%
-  dplyr::select(species, sex, body_mass_g, ends_with("_mm")) %>%
-  GGally::ggpairs(aes(color = species)) +
-  scale_colour_manual(values = c("darkorange", "purple", "cyan4")) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 20)
+    dplyr::select(species, sex, body_mass_g, ends_with("_mm")) %>%
+    GGally::ggpairs(aes(color = species)) +
+    scale_colour_manual(values = c("darkorange", "purple", "cyan4")) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 20)
 ```
 :::
 
@@ -3019,11 +3106,11 @@ penguins %>%
 #| fig-weight: 15
 
 penguins %>%
-  dplyr::select(species, sex, body_mass_g, ends_with("_mm")) %>%
-  GGally::ggpairs(aes(color = species)) +
-  scale_colour_manual(values = c("darkorange", "purple", "cyan4")) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 20)
+    dplyr::select(species, sex, body_mass_g, ends_with("_mm")) %>%
+    GGally::ggpairs(aes(color = species)) +
+    scale_colour_manual(values = c("darkorange", "purple", "cyan4")) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 20)
 ```
 :::
 :::::
@@ -3041,16 +3128,16 @@ penguins %>%
 library(psych)
 
 penguins %>%
-  dplyr::select(body_mass_g, ends_with("_mm")) %>%
-  pairs.panels(pch = 20, 
-               ellipses = FALSE, 
-               density = FALSE, 
-               stars = TRUE, 
-               hist.col = "gray",
-               digits = 2,
-               rug = FALSE,
-               breaks = 10,
-               ci = TRUE)
+    dplyr::select(body_mass_g, ends_with("_mm")) %>%
+    pairs.panels(pch = 20, 
+                 ellipses = FALSE, 
+                 density = FALSE, 
+                 stars = TRUE, 
+                 hist.col = "gray",
+                 digits = 2,
+                 rug = FALSE,
+                 breaks = 10,
+                 ci = TRUE)
 ```
 :::
 
@@ -3065,16 +3152,16 @@ penguins %>%
 library(psych)
 
 penguins %>%
-  dplyr::select(body_mass_g, ends_with("_mm")) %>%
-  pairs.panels(pch = 20, 
-               ellipses = FALSE, 
-               density = FALSE, 
-               stars = TRUE, 
-               hist.col = "gray",
-               digits = 2,
-               rug = FALSE,
-               breaks = 10,
-               ci = TRUE)
+    dplyr::select(body_mass_g, ends_with("_mm")) %>%
+    pairs.panels(pch = 20, 
+                 ellipses = FALSE, 
+                 density = FALSE, 
+                 stars = TRUE, 
+                 hist.col = "gray",
+                 digits = 2,
+                 rug = FALSE,
+                 breaks = 10,
+                 ci = TRUE)
 ```
 :::
 :::::
@@ -3235,14 +3322,14 @@ plot(bill_depth_mm ~ bill_length_mm,
 #| eval: false
 ggplot_boxplot <- ggplot(data = penguins, 
                          aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot(width = .3, 
-               show.legend = FALSE) +
-  geom_jitter(alpha = .5, 
-              show.legend = FALSE, 
-              position = position_jitter(width = .1, seed = 0)) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    geom_boxplot(width = .3, 
+                 show.legend = FALSE) +
+    geom_jitter(alpha = .5, 
+                show.legend = FALSE, 
+                position = position_jitter(width = .1, seed = 0)) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ggplot_boxplot
 ```
 :::
@@ -3255,14 +3342,14 @@ ggplot_boxplot
 
 ggplot_boxplot <- ggplot(data = penguins, 
                          aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot(width = .3, 
-               show.legend = FALSE) +
-  geom_jitter(alpha = .5, 
-              show.legend = FALSE, 
-              position = position_jitter(width = .1, seed = 0)) +
-  scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Species", y = "Flipper length (mm)")
+    geom_boxplot(width = .3, 
+                 show.legend = FALSE) +
+    geom_jitter(alpha = .5, 
+                show.legend = FALSE, 
+                position = position_jitter(width = .1, seed = 0)) +
+    scale_fill_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Species", y = "Flipper length (mm)")
 ggplot_boxplot
 ```
 :::
@@ -3281,13 +3368,13 @@ ggplot_scatterplot <- ggplot(data = penguins,
                                  y = bill_depth_mm,
                                  color = species,
                                  shape = species)) +
-  geom_point(size = 3, alpha = .8) +
-  scale_shape_manual(values = c(19, 15, 17)) +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies")
+    geom_point(size = 3, alpha = .8) +
+    scale_shape_manual(values = c(19, 15, 17)) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies")
 ggplot_scatterplot
 ```
 :::
@@ -3303,13 +3390,13 @@ ggplot_scatterplot <- ggplot(data = penguins,
                                  y = bill_depth_mm,
                                  color = species,
                                  shape = species)) +
-  geom_point(size = 3, alpha = .8) +
-  scale_shape_manual(values = c(19, 15, 17)) +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies")
+    geom_point(size = 3, alpha = .8) +
+    scale_shape_manual(values = c(19, 15, 17)) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies")
 ggplot_scatterplot
 ```
 :::
@@ -3481,16 +3568,16 @@ plot_animate <- ggplot(data = penguins,
                        aes(x = bill_length_mm, 
                            y = bill_depth_mm, 
                            color = species)) +
-  geom_point() +
-  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-  theme_bw(base_size = 15) +
-  labs(x = "Comprimento do bico (mm)", 
-       y = "Profundidade do bico (mm)", 
-       color = "Espécies", shape = "Espécies") +
-  labs(title = "{closest_state}") +
-  transition_states(species) +
-  enter_grow() + 
-  exit_fade()
+    geom_point() +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+    theme_bw(base_size = 15) +
+    labs(x = "Comprimento do bico (mm)", 
+         y = "Profundidade do bico (mm)", 
+         color = "Espécies", shape = "Espécies") +
+    labs(title = "{closest_state}") +
+    transition_states(species) +
+    enter_grow() + 
+    exit_fade()
 plot_animate
 ```
 :::
@@ -3544,8 +3631,8 @@ plot_ly(data = penguins,
         type = "scatter",
         color = ~species,
         colors = c("darkorange", "purple", "cyan4")) %>% 
-  layout(xaxis = list(title = "Comprimento do bico (mm)"),
-         yaxis = list(title = "Profundidade do bico (mm)"))
+    layout(xaxis = list(title = "Comprimento do bico (mm)"),
+           yaxis = list(title = "Profundidade do bico (mm)"))
 ```
 :::
 
@@ -3563,8 +3650,8 @@ plot_ly(data = penguins,
         type = "scatter",
         color = ~species,
         colors = c("darkorange", "purple", "cyan4")) %>% 
-  layout(xaxis = list(title = "Comprimento do bico (mm)"),
-         yaxis = list(title = "Profundidade do bico (mm)"))
+    layout(xaxis = list(title = "Comprimento do bico (mm)"),
+           yaxis = list(title = "Profundidade do bico (mm)"))
 ```
 :::
 :::::
@@ -3584,9 +3671,9 @@ plot_ly(data = penguins,
         type = "scatter3d",
         color = ~species,
         colors = c("darkorange", "purple", "cyan4")) %>% 
-  layout(scene = list(xaxis = list(title = "Comprimento do bico (mm)"),
-                      yaxis = list(title = "Profundidade do bico (mm)"),
-                      zaxis = list(title = "Massa (g)")))
+    layout(scene = list(xaxis = list(title = "Comprimento do bico (mm)"),
+                        yaxis = list(title = "Profundidade do bico (mm)"),
+                        zaxis = list(title = "Massa (g)")))
 ```
 :::
 
@@ -3601,9 +3688,9 @@ plot_ly(data = penguins,
         type = "scatter3d",
         color = ~species,
         colors = c("darkorange", "purple", "cyan4")) %>% 
-  layout(scene = list(xaxis = list(title = "Comprimento do bico (mm)"),
-                      yaxis = list(title = "Profundidade do bico (mm)"),
-                      zaxis = list(title = "Massa (g)")))
+    layout(scene = list(xaxis = list(title = "Comprimento do bico (mm)"),
+                        yaxis = list(title = "Profundidade do bico (mm)"),
+                        zaxis = list(title = "Massa (g)")))
 ```
 :::
 :::::
@@ -3617,19 +3704,19 @@ plot_ly(data = penguins,
 ```{r}
 #| eval: false
 plot_penguins_scatter_int <- ggplotly(
-  ggplot(data = penguins, 
-         aes(x = bill_length_mm, 
-             y = bill_depth_mm,
-             color = species,
-             shape = species)) +
-    geom_point(size = 3, alpha = .8) +
-    geom_smooth(method = "lm", se = FALSE) +
-    scale_shape_manual(values = c(19, 15, 17)) +
-    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-    theme_bw(base_size = 15) +
-    labs(x = "Comprimento do bico (mm)", 
-         y = "Profundidade do bico (mm)", 
-         color = "Espécies", shape = "Espécies"))
+    ggplot(data = penguins, 
+           aes(x = bill_length_mm, 
+               y = bill_depth_mm,
+               color = species,
+               shape = species)) +
+        geom_point(size = 3, alpha = .8) +
+        geom_smooth(method = "lm", se = FALSE) +
+        scale_shape_manual(values = c(19, 15, 17)) +
+        scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+        theme_bw(base_size = 15) +
+        labs(x = "Comprimento do bico (mm)", 
+             y = "Profundidade do bico (mm)", 
+             color = "Espécies", shape = "Espécies"))
 plot_penguins_scatter_int
 ```
 :::
@@ -3639,19 +3726,19 @@ plot_penguins_scatter_int
 #| echo: false
 
 plot_penguins_scatter_int <- ggplotly(
-  ggplot(data = penguins, 
-         aes(x = bill_length_mm, 
-             y = bill_depth_mm,
-             color = species,
-             shape = species)) +
-    geom_point(size = 3, alpha = .8) +
-    geom_smooth(method = "lm", se = FALSE) +
-    scale_shape_manual(values = c(19, 15, 17)) +
-    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
-    theme_bw(base_size = 15) +
-    labs(x = "Comprimento do bico (mm)", 
-         y = "Profundidade do bico (mm)", 
-         color = "Espécies", shape = "Espécies"))
+    ggplot(data = penguins, 
+           aes(x = bill_length_mm, 
+               y = bill_depth_mm,
+               color = species,
+               shape = species)) +
+        geom_point(size = 3, alpha = .8) +
+        geom_smooth(method = "lm", se = FALSE) +
+        scale_shape_manual(values = c(19, 15, 17)) +
+        scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+        theme_bw(base_size = 15) +
+        labs(x = "Comprimento do bico (mm)", 
+             y = "Profundidade do bico (mm)", 
+             color = "Espécies", shape = "Espécies"))
 plot_penguins_scatter_int
 ```
 :::
@@ -3698,8 +3785,8 @@ library(esquisse)
 
 # iniciar
 palmerpenguins::penguins %>% 
-  na.omit() %>% 
-  esquisse::esquisser()
+    na.omit() %>% 
+    esquisse::esquisser()
 ```
 :::
 :::
