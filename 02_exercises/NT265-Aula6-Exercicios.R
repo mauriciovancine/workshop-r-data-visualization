@@ -28,6 +28,7 @@ penguins
 # Faça um histograma da massa corporal (body_mass_g) dos pinguins.
 
 
+
 ## exercicio 02 ----
 # Crie um histograma de massa corporal colorido por espécie.
 
@@ -36,32 +37,34 @@ penguins
 # Faça um gráfico de densidade do comprimento da nadadeira por espécie.
 
 
+
 ## exercicio 04 ----
 # Crie um gráfico de densidade facetado por sexo.
 
 
 ## exercicio 05 ----
 # Crie uma tabela de frequência mostrando a proporção de pinguins por ilhas e 
-# depois use o ggpie para criar um gráfico de setores (pizza).
+# depois use o ggpie() para criar um gráfico de setores (pizza).
 
 
 ## exercicio 06 ----
-# use os mesmos dados para criar um gráfico de dunuts usando o ggdonutchart.
+# use os mesmos dados para criar um gráfico de dunuts usando o ggdonutchart().
 
 
 ## exercicio 07 ----
-# Mostre a proporção de individuos femeas e machos em cada ilha usando combinacao de graficos.
+# Mostre a proporção de individuos femeas e machos em cada ilha usando dois ggdonutchart() e
+# combinando esses graficos.
 
 
 ## exercicio 08 ----
 # Faça um gráfico de barras mostrando o número de indivíduos por ilha. Add
 # os numeros nas barras.
-
+# dica: geom_label()
 
 ## exercicio 09 ----
 # Faça um gráfico de barras mostrando o número de indivíduos por ilha para cada sexo. Add
-# os numeros nas barras. Dicas: aes(x = island, y = n, fill = sex, group = sex) e 
-# position = position_dodge(width = 0.9)
+# os numeros nas barras. 
+# Dicas: aes(x = island, y = n, fill = sex, group = sex) e position = position_dodge(width = 0.9)
 
 
 ## exercicio 10 ----
@@ -75,10 +78,12 @@ penguins
 
 ## exercicio 12 ----
 # Crie um boxplot da massa corporal por espécie e sexo.
+# dica: fill = sex
 
 
 ## exercicio 13 ----
 # Adicione pontos individuais ao boxplot anterior.
+# dica: geom_jitter(alpha = .3, position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8))
 
 
 ## exercicio 14 ----
@@ -98,7 +103,6 @@ penguins
 # Crie uma matriz de dispersão entre variáveis morfológicas.
 # dica: GGally::ggpairs
 
-
 ## exercicio 18 ----
 # Combine dois gráficos (histograma e boxplot) lado a lado.
 # dica: ggpubr::ggarrange(g1, g2, ncol = 2, labels = c("A", "B"))
@@ -112,5 +116,6 @@ penguins
 ## exercicio 20 ----
 # Crie um grafico animado mostrando as espécies em sequência no gráfico do ex. 15
 # dica: + transition_states(species) e animate(nframes = 60, fps = 10)
+
 
 # end ---------------------------------------------------------------------

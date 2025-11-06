@@ -62,7 +62,7 @@ ggplot(penguins, aes(x = body_mass_g, fill = sex)) +
 
 ## exercicio 05 ----
 # Crie uma tabela de frequência mostrando a proporção de pinguins por ilhas e 
-# depois use o ggpie para criar um gráfico de setores (pizza).
+# depois use o ggpie() para criar um gráfico de setores (pizza).
 
 # calculo da proporcao
 penguins_prop <- penguins %>%
@@ -80,7 +80,7 @@ ggpie(penguins_prop,
       palette = c("darkorange", "purple", "cyan4"))
 
 ## exercicio 06 ----
-# use os mesmos dados para criar um gráfico de dunuts usando o ggdonutchart.
+# use os mesmos dados para criar um gráfico de dunuts usando o ggdonutchart().
 ggdonutchart(penguins_prop,
              "prop", 
              label = "prop",
@@ -91,7 +91,8 @@ ggdonutchart(penguins_prop,
              palette = c("darkorange", "purple", "cyan4"))
 
 ## exercicio 07 ----
-# Mostre a proporção de individuos femeas e machos em cada ilha usando combinacao de graficos.
+# Mostre a proporção de individuos femeas e machos em cada ilha usando dois ggdonutchart() e
+# combinando esses graficos.
 penguins_sex_prop <- penguins %>%
     dplyr::count(island, sex) %>% 
     dplyr::mutate(prop = round(n/sum(n), 4)*100)
@@ -134,6 +135,7 @@ donut_female + donut_male
 ## exercicio 08 ----
 # Faça um gráfico de barras mostrando o número de indivíduos por ilha. Add
 # os numeros nas barras.
+# dica: geom_label()
 penguins_count <- penguins %>%
     dplyr::count(island)
 penguins_count
@@ -151,8 +153,8 @@ ggplot(data = penguins_count,
 
 ## exercicio 09 ----
 # Faça um gráfico de barras mostrando o número de indivíduos por ilha para cada sexo. Add
-# os numeros nas barras. Dicas: aes(x = island, y = n, fill = sex, group = sex) e 
-# position = position_dodge(width = 0.9)
+# os numeros nas barras. 
+# Dicas: aes(x = island, y = n, fill = sex, group = sex) e position = position_dodge(width = 0.9)
 penguins_count <- penguins %>%
     dplyr::count(island, sex)
 penguins_count
@@ -175,8 +177,7 @@ ggplot(penguins,
     scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
     labs(x = "Espécie", y = "Comprimento médio (mm)", 
          title = "Comprimento da nadadeira por sexo e espécie") +
-    theme_bw(base_size = 20) +
-    theme(legend.position = "none")
+    theme_bw(base_size = 20)
 
 ## exercicio 11 ----
 # Crie um boxplot da massa corporal por espécie.
@@ -190,6 +191,7 @@ ggplot(penguins, aes(x = species, y = body_mass_g, fill = species)) +
 
 ## exercicio 12 ----
 # Crie um boxplot da massa corporal por espécie e sexo.
+# dica: fill = sex
 ggplot(penguins, aes(x = species, y = body_mass_g, fill = sex)) +
     geom_boxplot() +
     scale_fill_manual(values = c("lightblue", "pink")) +
@@ -199,6 +201,7 @@ ggplot(penguins, aes(x = species, y = body_mass_g, fill = sex)) +
 
 ## exercicio 13 ----
 # Adicione pontos individuais ao boxplot anterior.
+# dica: geom_jitter(alpha = .3, position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8))
 ggplot(penguins, aes(x = species, y = body_mass_g, fill = sex)) +
     geom_boxplot(alpha = 0.6, position = position_dodge(width = 0.8)) +
     geom_jitter(alpha = .3, 
@@ -222,6 +225,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm)) +
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm,
                      color = species, shape = sex)) +
     geom_point(size = 3, alpha = 0.8) +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
     labs(x = "Bico (mm)", y = "Nadadeira (mm)",
          title = "Dispersão por espécie e sexo") +
     theme_bw(base_size = 20)
@@ -233,6 +237,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm,
                      color = species)) +
     geom_point(size = 3, alpha = 0.7) +
     geom_smooth(method = "lm") +
+    scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
     labs(x = "Comprimento do bico (mm)", 
          y = "Comprimento da nadadeira (mm)",
          title = "Relação entre bico e nadadeira com linha de tendência") +
